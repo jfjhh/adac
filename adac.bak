@@ -973,52 +973,52 @@ Wire Wire Line
 	6100 2300 6100 2500
 Text Notes 8150 7650 0    50   ~ 0
 2019-05-31
-Text GLabel 1350 4750 2    50   Input ~ 0
+Text GLabel 1350 5550 2    50   Input ~ 0
 OE
 $Comp
 L Device:R R1
 U 1 1 5D065464
-P 1300 4550
-F 0 "R1" H 1370 4596 50  0000 L CNN
-F 1 "10k" H 1370 4505 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 1230 4550 50  0001 C CNN
-F 3 "~" H 1300 4550 50  0001 C CNN
-	1    1300 4550
+P 1300 5350
+F 0 "R1" H 1370 5396 50  0000 L CNN
+F 1 "10k" H 1370 5305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 1230 5350 50  0001 C CNN
+F 3 "~" H 1300 5350 50  0001 C CNN
+	1    1300 5350
 	1    0    0    -1  
 $EndComp
-Text GLabel 1250 4350 0    50   Input ~ 0
+Text GLabel 1250 5150 0    50   Input ~ 0
 5V
 Wire Wire Line
-	1300 4750 1300 4700
-Connection ~ 1300 4750
+	1300 5550 1300 5500
+Connection ~ 1300 5550
 Wire Wire Line
-	1300 4750 1350 4750
+	1300 5550 1350 5550
 Wire Wire Line
-	1250 4350 1300 4350
+	1250 5150 1300 5150
 Wire Wire Line
-	1300 4350 1300 4400
+	1300 5150 1300 5200
 $Comp
 L Switch:SW_SPST SW1
 U 1 1 5D0D07C8
-P 1300 5000
-F 0 "SW1" V 1254 4912 50  0000 R CNN
-F 1 "SW_SPST" V 1345 4912 50  0000 R CNN
-F 2 "Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight" H 1300 5000 50  0001 C CNN
-F 3 "~" H 1300 5000 50  0001 C CNN
-	1    1300 5000
+P 1300 5800
+F 0 "SW1" V 1254 5712 50  0000 R CNN
+F 1 "SW_SPST" V 1345 5712 50  0000 R CNN
+F 2 "Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight" H 1300 5800 50  0001 C CNN
+F 3 "~" H 1300 5800 50  0001 C CNN
+	1    1300 5800
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	1300 4800 1300 4750
+	1300 5600 1300 5550
 $Comp
 L power:GND #PWR03
 U 1 1 5D0D88A4
-P 1300 5200
-F 0 "#PWR03" H 1300 4950 50  0001 C CNN
-F 1 "GND" H 1305 5027 50  0000 C CNN
-F 2 "" H 1300 5200 50  0001 C CNN
-F 3 "" H 1300 5200 50  0001 C CNN
-	1    1300 5200
+P 1300 6000
+F 0 "#PWR03" H 1300 5750 50  0001 C CNN
+F 1 "GND" H 1305 5827 50  0000 C CNN
+F 2 "" H 1300 6000 50  0001 C CNN
+F 3 "" H 1300 6000 50  0001 C CNN
+	1    1300 6000
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -1043,7 +1043,7 @@ Text Notes 950  2950 0    50   ~ 0
 Vin+
 Text Notes 950  3750 0    50   ~ 0
 Vin-
-Text Notes 850  5050 0    50   ~ 0
+Text Notes 850  5850 0    50   ~ 0
 Output\nEnable
 Text GLabel 4150 3250 2    50   Input ~ 0
 OF
@@ -1254,6 +1254,52 @@ Wire Wire Line
 	5800 5650 5750 5650
 Text GLabel 5550 5650 0    50   Input ~ 0
 3.3V
+Connection ~ 1300 4800
+$Comp
+L power:GNDA #PWR?
+U 1 1 5CF2BD66
+P 1300 4800
+F 0 "#PWR?" H 1300 4550 50  0001 C CNN
+F 1 "GNDA" H 1305 4627 50  0000 C CNN
+F 2 "" H 1300 4800 50  0001 C CNN
+F 3 "" H 1300 4800 50  0001 C CNN
+	1    1300 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 4500 1600 4500
+Wire Wire Line
+	1300 4800 1600 4800
+Wire Wire Line
+	1300 4700 1300 4800
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5CF2BD6F
+P 1300 4500
+F 0 "J?" H 1228 4738 50  0000 C CNN
+F 1 "Conn_Coaxial" H 1228 4647 50  0000 C CNN
+F 2 "Connector_Coaxial:BNC_TEConnectivity_1478204_Vertical" H 1300 4500 50  0001 C CNN
+F 3 " ~" H 1300 4500 50  0001 C CNN
+	1    1300 4500
+	-1   0    0    -1  
+$EndComp
+Text Notes 950  4550 0    50   ~ 0
+Clock
+Text GLabel 1750 4500 2    50   Input ~ 0
+CLK
+$Comp
+L Device:R R?
+U 1 1 5CF3ACE7
+P 1600 4650
+F 0 "R?" H 1670 4696 50  0000 L CNN
+F 1 "51R" H 1670 4605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 1530 4650 50  0001 C CNN
+F 3 "~" H 1600 4650 50  0001 C CNN
+	1    1600 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4500 1750 4500
 Wire Bus Line
 	9550 4500 9550 5200
 Wire Bus Line
@@ -1270,4 +1316,5 @@ Wire Bus Line
 	6950 3100 6950 4250
 Wire Bus Line
 	5450 3100 5450 4250
+Connection ~ 1600 4500
 $EndSCHEMATC

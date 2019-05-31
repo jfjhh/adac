@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name adac-sch)(type Legacy)(uri ${KIPRJMOD}/adac-sch.lib)(options "")(descr ""))
+)
